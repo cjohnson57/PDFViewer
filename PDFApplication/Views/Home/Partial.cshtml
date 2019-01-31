@@ -1,0 +1,162 @@
+﻿@model PDFApplication.Models.FactCrash
+
+<style type="text/css">
+
+    #pdfbox {
+        width: 600px;
+        height: 750px;
+        border: 5px solid #ccc;
+    }
+</style>
+
+
+@if(Model.CrashNumber == "-1")
+{
+    <h2>Could not find report</h2>
+}
+else
+{
+    <div class="row">
+        <div class="col-md-6">
+            @using (Html.BeginForm())
+            {
+                <input type="submit" value="Save Changes" />
+                <br />
+                <br />
+                @Html.TextBoxFor(model => model.CrashNumber)
+                <br />
+                <br />
+                @(Html.DropDownListFor
+                        (
+                            model => model.SeverityCode,
+                            new SelectList
+                            (
+                                new List<Object>
+                                {
+                                new SelectListItem{Text = "Fatal", Value = "A"},
+                                new SelectListItem{Text = "Severe", Value = "B"},
+                                new SelectListItem{Text = "Moderate", Value = "C"},
+                                new SelectListItem{Text = "Complaint", Value = "D"},
+                                new SelectListItem{Text = "No injury", Value = "E"}
+                                },
+                                "value",
+                                "text",
+                                Model.SeverityCode
+                            )
+                        )
+                )
+                <br />
+                <br />
+                @(Html.DropDownListFor
+                        (
+                            model => model.PredictedAlcohol,
+                            new SelectList
+                            (
+                                new List<Object>
+                                {
+                                new SelectListItem{Text = "Alcohol predicted", Value = "1"},
+                                new SelectListItem{Text = "Alcohol not predicted", Value = "0"},
+                                },
+                                "value",
+                                "text",
+                                Model.PredictedAlcohol
+                            )
+                        )
+                )
+                @Html.HiddenFor(model => model.AccessControlCode)
+                @Html.HiddenFor(model => model.AgencySK)
+                @Html.HiddenFor(model => model.Aggressive)
+                @Html.HiddenFor(model => model.Alcohol)
+                @Html.HiddenFor(model => model.AlignmentCode)
+                @Html.HiddenFor(model => model.AmbulanceArrivalToHospital)
+                @Html.HiddenFor(model => model.AmbulanceArrivalToHospitalTime)
+                @Html.HiddenFor(model => model.AmbulanceArrive)
+                @Html.HiddenFor(model => model.AmbulanceArriveTime)
+                @Html.HiddenFor(model => model.AmbulanceCall)
+                @Html.HiddenFor(model => model.AmbulanceCallTime)
+                @Html.HiddenFor(model => model.AmbulanceHospital)
+                @Html.HiddenFor(model => model.AmbulanceHospitalTime)
+                @Html.HiddenFor(model => model.BAC08)
+                @Html.HiddenFor(model => model.Bicycle)
+                @Html.HiddenFor(model => model.BusLarge)
+                @Html.HiddenFor(model => model.BusSchool)
+                @Html.HiddenFor(model => model.BusSmall)
+                @Html.HiddenFor(model => model.ByPassCode)
+                @Html.HiddenFor(model => model.CitySK)
+                @Html.HiddenFor(model => model.CMV)
+                @Html.HiddenFor(model => model.CMVSeverityCode)
+                @Html.HiddenFor(model => model.ConstructionMaintenanceZone)
+                @Html.HiddenFor(model => model.ControlSection)
+                @Html.HiddenFor(model => model.CrashOrigin)
+                @Html.HiddenFor(model => model.CrashPK)
+                @Html.HiddenFor(model => model.CrashSeverityCode)
+                @Html.HiddenFor(model => model.CrashTime)
+                @Html.HiddenFor(model => model.DataChanged)
+                @Html.HiddenFor(model => model.DateEntered)
+                @Html.HiddenFor(model => model.DateSK)
+                @Html.HiddenFor(model => model.Distraction)
+                @Html.HiddenFor(model => model.DistrictZone)
+                @Html.HiddenFor(model => model.DOTDWorkZone)
+                @Html.HiddenFor(model => model.DOTDWorkZone5)
+                @Html.HiddenFor(model => model.Drugs)
+                @Html.HiddenFor(model => model.ElevatedInterstateCrash)
+                @Html.HiddenFor(model => model.Fatality)
+                @Html.HiddenFor(model => model.HazMatInvolved)
+                @Html.HiddenFor(model => model.HazMatReleasedInvolved)
+                @Html.HiddenFor(model => model.HighwayNumberSK)
+                @Html.HiddenFor(model => model.HighwayTypeCode)
+                @Html.HiddenFor(model => model.HitAndRun)
+                @Html.HiddenFor(model => model.Holiday)
+                @Html.HiddenFor(model => model.HSRGDate)
+                @Html.HiddenFor(model => model.HWYSectionsAK)
+                @Html.HiddenFor(model => model.Inattentive)
+                @Html.HiddenFor(model => model.Injury)
+                @Html.HiddenFor(model => model.IntersectingRoadName)
+                @Html.HiddenFor(model => model.Intersection)
+                @Html.HiddenFor(model => model.InvestigatingAgencyCode)
+                @Html.HiddenFor(model => model.LaneClosure)
+                @Html.HiddenFor(model => model.LaneClosureTime)
+                @Html.HiddenFor(model => model.LaneDeparture)
+                @Html.HiddenFor(model => model.Lat)
+                @Html.HiddenFor(model => model.LightingCode)
+                @Html.HiddenFor(model => model.LocationTypeCode)
+                @Html.HiddenFor(model => model.LogMile)
+                @Html.HiddenFor(model => model.Long)
+                @Html.HiddenFor(model => model.MannerCollisionCode)
+                @Html.HiddenFor(model => model.MilePost)
+                @Html.HiddenFor(model => model.Motorcycle)
+                @Html.HiddenFor(model => model.NoRestraint)
+                @Html.HiddenFor(model => model.OlderDriver)
+                @Html.HiddenFor(model => model.ParishCode)
+                @Html.HiddenFor(model => model.Pedestrian)
+                @Html.HiddenFor(model => model.PrimaryContributingFactorCode)
+                @Html.HiddenFor(model => model.PrimaryDirection)
+                @Html.HiddenFor(model => model.PrimaryDistance)
+                @Html.HiddenFor(model => model.PrimaryHighwayNumber)
+                @Html.HiddenFor(model => model.PrimaryMeasurementMiles)
+                @Html.HiddenFor(model => model.PrimaryRoadName)
+                @Html.HiddenFor(model => model.ProcessDate)
+                @Html.HiddenFor(model => model.PublicPropertyDamage)
+                @Html.HiddenFor(model => model.RailRoadTrainInvolved)
+                @Html.HiddenFor(model => model.RoadwayConditionCode)
+                @Html.HiddenFor(model => model.RoadwayDeparture)
+                @Html.HiddenFor(model => model.RoadwayRelationCode)
+                @Html.HiddenFor(model => model.RoadwayTypeCode)
+                @Html.HiddenFor(model => model.SecondaryContributingFactorCode)
+                @Html.HiddenFor(model => model.SecondaryDistance)
+                @Html.HiddenFor(model => model.SingleVehicle)
+                @Html.HiddenFor(model => model.SurfaceConditionCode)
+                @Html.HiddenFor(model => model.SurfaceTypeCode)
+                @Html.HiddenFor(model => model.Troop)
+                @Html.HiddenFor(model => model.TruckBusInvolvement)
+                @Html.HiddenFor(model => model.WeatherCode)
+                @Html.HiddenFor(model => model.YoungDriver)
+            }
+        </div>
+        <div class="col-md-6">
+            <object id='pdfbox' type="application/pdf" data="@Url.Action("GeneratePDF", "Home", Model)">
+                Click @Html.ActionLink("here", "GeneratePDF", "Home") to view the file.
+            </object>
+        </div>
+    </div>
+}

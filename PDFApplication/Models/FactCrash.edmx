@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CRASHDWHSRGModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="FactCrash">
+          <Key>
+            <PropertyRef Name="CrashPK" />
+          </Key>
+          <Property Name="CrashPK" Type="int" Nullable="false" />
+          <Property Name="CrashNumber" Type="varchar" MaxLength="20" />
+          <Property Name="DateSK" Type="int" Nullable="false" />
+          <Property Name="CrashTime" Type="datetime" />
+          <Property Name="Lat" Type="float" />
+          <Property Name="Long" Type="float" />
+          <Property Name="AccessControlCode" Type="varchar" MaxLength="2" />
+          <Property Name="Alcohol" Type="smallint" />
+          <Property Name="AlignmentCode" Type="varchar" MaxLength="2" />
+          <Property Name="ByPassCode" Type="varchar" MaxLength="2" />
+          <Property Name="CitySK" Type="int" Nullable="false" />
+          <Property Name="PrimaryContributingFactorCode" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="SecondaryContributingFactorCode" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="DistrictZone" Type="varchar" MaxLength="6" />
+          <Property Name="PublicPropertyDamage" Type="smallint" />
+          <Property Name="RailRoadTrainInvolved" Type="smallint" />
+          <Property Name="HitAndRun" Type="smallint" />
+          <Property Name="Drugs" Type="smallint" />
+          <Property Name="InvestigatingAgencyCode" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="LightingCode" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="LocationTypeCode" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="MilePost" Type="float" />
+          <Property Name="MannerCollisionCode" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="SingleVehicle" Type="smallint" />
+          <Property Name="ParishCode" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="PrimaryHighwayNumber" Type="int" />
+          <Property Name="PrimaryRoadName" Type="varchar" MaxLength="36" />
+          <Property Name="PrimaryDistance" Type="float" />
+          <Property Name="PrimaryDirection" Type="varchar" MaxLength="2" />
+          <Property Name="RoadwayConditionCode" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="RoadwayRelationCode" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="RoadwayTypeCode" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="AgencySK" Type="int" Nullable="false" />
+          <Property Name="SecondaryDistance" Type="float" />
+          <Property Name="Intersection" Type="smallint" />
+          <Property Name="SeverityCode" Type="varchar" MaxLength="2" />
+          <Property Name="CrashSeverityCode" Type="varchar" MaxLength="2" />
+          <Property Name="SurfaceConditionCode" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="SurfaceTypeCode" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="TruckBusInvolvement" Type="smallint" />
+          <Property Name="Troop" Type="varchar" MaxLength="2" />
+          <Property Name="WeatherCode" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="ConstructionMaintenanceZone" Type="smallint" />
+          <Property Name="Fatality" Type="smallint" />
+          <Property Name="HighwayTypeCode" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="PrimaryMeasurementMiles" Type="smallint" />
+          <Property Name="IntersectingRoadName" Type="varchar" MaxLength="36" />
+          <Property Name="Injury" Type="smallint" />
+          <Property Name="Pedestrian" Type="smallint" />
+          <Property Name="DateEntered" Type="int" />
+          <Property Name="DataChanged" Type="int" />
+          <Property Name="ProcessDate" Type="int" />
+          <Property Name="HSRGDate" Type="int" />
+          <Property Name="CrashOrigin" Type="int" />
+          <Property Name="Aggressive" Type="smallint" />
+          <Property Name="Distraction" Type="smallint" />
+          <Property Name="Inattentive" Type="smallint" />
+          <Property Name="RoadwayDeparture" Type="smallint" />
+          <Property Name="LaneDeparture" Type="smallint" />
+          <Property Name="NoRestraint" Type="smallint" />
+          <Property Name="PredictedAlcohol" Type="smallint" />
+          <Property Name="CMV" Type="smallint" />
+          <Property Name="CMVSeverityCode" Type="varchar" MaxLength="2" />
+          <Property Name="YoungDriver" Type="smallint" />
+          <Property Name="OlderDriver" Type="smallint" />
+          <Property Name="DOTDWorkZone" Type="smallint" />
+          <Property Name="DOTDWorkZone5" Type="smallint" />
+          <Property Name="HighwayNumberSK" Type="int" />
+          <Property Name="Holiday" Type="int" />
+          <Property Name="HazMatInvolved" Type="smallint" />
+          <Property Name="HWYSectionsAK" Type="varchar" MaxLength="54" />
+          <Property Name="ControlSection" Type="varchar" MaxLength="6" />
+          <Property Name="LogMile" Type="float" />
+          <Property Name="AmbulanceCallTime" Type="int" />
+          <Property Name="AmbulanceArriveTime" Type="int" />
+          <Property Name="AmbulanceHospitalTime" Type="int" />
+          <Property Name="AmbulanceArrivalToHospitalTime" Type="int" />
+          <Property Name="LaneClosureTime" Type="int" />
+          <Property Name="ElevatedInterstateCrash" Type="smallint" />
+          <Property Name="AmbulanceCall" Type="smallint" />
+          <Property Name="AmbulanceArrive" Type="smallint" />
+          <Property Name="AmbulanceHospital" Type="smallint" />
+          <Property Name="AmbulanceArrivalToHospital" Type="smallint" />
+          <Property Name="LaneClosure" Type="smallint" />
+          <Property Name="Motorcycle" Type="smallint" />
+          <Property Name="Bicycle" Type="smallint" />
+          <Property Name="BusLarge" Type="smallint" />
+          <Property Name="BusSchool" Type="smallint" />
+          <Property Name="BusSmall" Type="smallint" />
+          <Property Name="HazMatReleasedInvolved" Type="smallint" />
+          <Property Name="BAC08" Type="nvarchar" MaxLength="2" />
+        </EntityType>
+        <EntityContainer Name="CRASHDWHSRGModelStoreContainer">
+          <EntitySet Name="FactCrash" EntityType="Self.FactCrash" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CRASHDWHSRGModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="FactCrash">
+          <Key>
+            <PropertyRef Name="CrashPK" />
+          </Key>
+          <Property Name="CrashPK" Type="Int32" Nullable="false" />
+          <Property Name="CrashNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DateSK" Type="Int32" Nullable="false" />
+          <Property Name="CrashTime" Type="DateTime" Precision="3" />
+          <Property Name="Lat" Type="Double" />
+          <Property Name="Long" Type="Double" />
+          <Property Name="AccessControlCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Alcohol" Type="Int16" />
+          <Property Name="AlignmentCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="ByPassCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="CitySK" Type="Int32" Nullable="false" />
+          <Property Name="PrimaryContributingFactorCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SecondaryContributingFactorCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DistrictZone" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="PublicPropertyDamage" Type="Int16" />
+          <Property Name="RailRoadTrainInvolved" Type="Int16" />
+          <Property Name="HitAndRun" Type="Int16" />
+          <Property Name="Drugs" Type="Int16" />
+          <Property Name="InvestigatingAgencyCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LightingCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LocationTypeCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MilePost" Type="Double" />
+          <Property Name="MannerCollisionCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SingleVehicle" Type="Int16" />
+          <Property Name="ParishCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PrimaryHighwayNumber" Type="Int32" />
+          <Property Name="PrimaryRoadName" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="PrimaryDistance" Type="Double" />
+          <Property Name="PrimaryDirection" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="RoadwayConditionCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RoadwayRelationCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RoadwayTypeCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AgencySK" Type="Int32" Nullable="false" />
+          <Property Name="SecondaryDistance" Type="Double" />
+          <Property Name="Intersection" Type="Int16" />
+          <Property Name="SeverityCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="CrashSeverityCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="SurfaceConditionCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SurfaceTypeCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TruckBusInvolvement" Type="Int16" />
+          <Property Name="Troop" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="WeatherCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ConstructionMaintenanceZone" Type="Int16" />
+          <Property Name="Fatality" Type="Int16" />
+          <Property Name="HighwayTypeCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PrimaryMeasurementMiles" Type="Int16" />
+          <Property Name="IntersectingRoadName" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="Injury" Type="Int16" />
+          <Property Name="Pedestrian" Type="Int16" />
+          <Property Name="DateEntered" Type="Int32" />
+          <Property Name="DataChanged" Type="Int32" />
+          <Property Name="ProcessDate" Type="Int32" />
+          <Property Name="HSRGDate" Type="Int32" />
+          <Property Name="CrashOrigin" Type="Int32" />
+          <Property Name="Aggressive" Type="Int16" />
+          <Property Name="Distraction" Type="Int16" />
+          <Property Name="Inattentive" Type="Int16" />
+          <Property Name="RoadwayDeparture" Type="Int16" />
+          <Property Name="LaneDeparture" Type="Int16" />
+          <Property Name="NoRestraint" Type="Int16" />
+          <Property Name="PredictedAlcohol" Type="Int16" />
+          <Property Name="CMV" Type="Int16" />
+          <Property Name="CMVSeverityCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="YoungDriver" Type="Int16" />
+          <Property Name="OlderDriver" Type="Int16" />
+          <Property Name="DOTDWorkZone" Type="Int16" />
+          <Property Name="DOTDWorkZone5" Type="Int16" />
+          <Property Name="HighwayNumberSK" Type="Int32" />
+          <Property Name="Holiday" Type="Int32" />
+          <Property Name="HazMatInvolved" Type="Int16" />
+          <Property Name="HWYSectionsAK" Type="String" MaxLength="54" FixedLength="false" Unicode="false" />
+          <Property Name="ControlSection" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="LogMile" Type="Double" />
+          <Property Name="AmbulanceCallTime" Type="Int32" />
+          <Property Name="AmbulanceArriveTime" Type="Int32" />
+          <Property Name="AmbulanceHospitalTime" Type="Int32" />
+          <Property Name="AmbulanceArrivalToHospitalTime" Type="Int32" />
+          <Property Name="LaneClosureTime" Type="Int32" />
+          <Property Name="ElevatedInterstateCrash" Type="Int16" />
+          <Property Name="AmbulanceCall" Type="Int16" />
+          <Property Name="AmbulanceArrive" Type="Int16" />
+          <Property Name="AmbulanceHospital" Type="Int16" />
+          <Property Name="AmbulanceArrivalToHospital" Type="Int16" />
+          <Property Name="LaneClosure" Type="Int16" />
+          <Property Name="Motorcycle" Type="Int16" />
+          <Property Name="Bicycle" Type="Int16" />
+          <Property Name="BusLarge" Type="Int16" />
+          <Property Name="BusSchool" Type="Int16" />
+          <Property Name="BusSmall" Type="Int16" />
+          <Property Name="HazMatReleasedInvolved" Type="Int16" />
+          <Property Name="BAC08" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="CRASHDWHSRGEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="FactCrashes" EntityType="Self.FactCrash" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CRASHDWHSRGModelStoreContainer" CdmEntityContainer="CRASHDWHSRGEntities">
+          <EntitySetMapping Name="FactCrashes">
+            <EntityTypeMapping TypeName="CRASHDWHSRGModel.FactCrash">
+              <MappingFragment StoreEntitySet="FactCrash">
+                <ScalarProperty Name="CrashPK" ColumnName="CrashPK" />
+                <ScalarProperty Name="CrashNumber" ColumnName="CrashNumber" />
+                <ScalarProperty Name="DateSK" ColumnName="DateSK" />
+                <ScalarProperty Name="CrashTime" ColumnName="CrashTime" />
+                <ScalarProperty Name="Lat" ColumnName="Lat" />
+                <ScalarProperty Name="Long" ColumnName="Long" />
+                <ScalarProperty Name="AccessControlCode" ColumnName="AccessControlCode" />
+                <ScalarProperty Name="Alcohol" ColumnName="Alcohol" />
+                <ScalarProperty Name="AlignmentCode" ColumnName="AlignmentCode" />
+                <ScalarProperty Name="ByPassCode" ColumnName="ByPassCode" />
+                <ScalarProperty Name="CitySK" ColumnName="CitySK" />
+                <ScalarProperty Name="PrimaryContributingFactorCode" ColumnName="PrimaryContributingFactorCode" />
+                <ScalarProperty Name="SecondaryContributingFactorCode" ColumnName="SecondaryContributingFactorCode" />
+                <ScalarProperty Name="DistrictZone" ColumnName="DistrictZone" />
+                <ScalarProperty Name="PublicPropertyDamage" ColumnName="PublicPropertyDamage" />
+                <ScalarProperty Name="RailRoadTrainInvolved" ColumnName="RailRoadTrainInvolved" />
+                <ScalarProperty Name="HitAndRun" ColumnName="HitAndRun" />
+                <ScalarProperty Name="Drugs" ColumnName="Drugs" />
+                <ScalarProperty Name="InvestigatingAgencyCode" ColumnName="InvestigatingAgencyCode" />
+                <ScalarProperty Name="LightingCode" ColumnName="LightingCode" />
+                <ScalarProperty Name="LocationTypeCode" ColumnName="LocationTypeCode" />
+                <ScalarProperty Name="MilePost" ColumnName="MilePost" />
+                <ScalarProperty Name="MannerCollisionCode" ColumnName="MannerCollisionCode" />
+                <ScalarProperty Name="SingleVehicle" ColumnName="SingleVehicle" />
+                <ScalarProperty Name="ParishCode" ColumnName="ParishCode" />
+                <ScalarProperty Name="PrimaryHighwayNumber" ColumnName="PrimaryHighwayNumber" />
+                <ScalarProperty Name="PrimaryRoadName" ColumnName="PrimaryRoadName" />
+                <ScalarProperty Name="PrimaryDistance" ColumnName="PrimaryDistance" />
+                <ScalarProperty Name="PrimaryDirection" ColumnName="PrimaryDirection" />
+                <ScalarProperty Name="RoadwayConditionCode" ColumnName="RoadwayConditionCode" />
+                <ScalarProperty Name="RoadwayRelationCode" ColumnName="RoadwayRelationCode" />
+                <ScalarProperty Name="RoadwayTypeCode" ColumnName="RoadwayTypeCode" />
+                <ScalarProperty Name="AgencySK" ColumnName="AgencySK" />
+                <ScalarProperty Name="SecondaryDistance" ColumnName="SecondaryDistance" />
+                <ScalarProperty Name="Intersection" ColumnName="Intersection" />
+                <ScalarProperty Name="SeverityCode" ColumnName="SeverityCode" />
+                <ScalarProperty Name="CrashSeverityCode" ColumnName="CrashSeverityCode" />
+                <ScalarProperty Name="SurfaceConditionCode" ColumnName="SurfaceConditionCode" />
+                <ScalarProperty Name="SurfaceTypeCode" ColumnName="SurfaceTypeCode" />
+                <ScalarProperty Name="TruckBusInvolvement" ColumnName="TruckBusInvolvement" />
+                <ScalarProperty Name="Troop" ColumnName="Troop" />
+                <ScalarProperty Name="WeatherCode" ColumnName="WeatherCode" />
+                <ScalarProperty Name="ConstructionMaintenanceZone" ColumnName="ConstructionMaintenanceZone" />
+                <ScalarProperty Name="Fatality" ColumnName="Fatality" />
+                <ScalarProperty Name="HighwayTypeCode" ColumnName="HighwayTypeCode" />
+                <ScalarProperty Name="PrimaryMeasurementMiles" ColumnName="PrimaryMeasurementMiles" />
+                <ScalarProperty Name="IntersectingRoadName" ColumnName="IntersectingRoadName" />
+                <ScalarProperty Name="Injury" ColumnName="Injury" />
+                <ScalarProperty Name="Pedestrian" ColumnName="Pedestrian" />
+                <ScalarProperty Name="DateEntered" ColumnName="DateEntered" />
+                <ScalarProperty Name="DataChanged" ColumnName="DataChanged" />
+                <ScalarProperty Name="ProcessDate" ColumnName="ProcessDate" />
+                <ScalarProperty Name="HSRGDate" ColumnName="HSRGDate" />
+                <ScalarProperty Name="CrashOrigin" ColumnName="CrashOrigin" />
+                <ScalarProperty Name="Aggressive" ColumnName="Aggressive" />
+                <ScalarProperty Name="Distraction" ColumnName="Distraction" />
+                <ScalarProperty Name="Inattentive" ColumnName="Inattentive" />
+                <ScalarProperty Name="RoadwayDeparture" ColumnName="RoadwayDeparture" />
+                <ScalarProperty Name="LaneDeparture" ColumnName="LaneDeparture" />
+                <ScalarProperty Name="NoRestraint" ColumnName="NoRestraint" />
+                <ScalarProperty Name="PredictedAlcohol" ColumnName="PredictedAlcohol" />
+                <ScalarProperty Name="CMV" ColumnName="CMV" />
+                <ScalarProperty Name="CMVSeverityCode" ColumnName="CMVSeverityCode" />
+                <ScalarProperty Name="YoungDriver" ColumnName="YoungDriver" />
+                <ScalarProperty Name="OlderDriver" ColumnName="OlderDriver" />
+                <ScalarProperty Name="DOTDWorkZone" ColumnName="DOTDWorkZone" />
+                <ScalarProperty Name="DOTDWorkZone5" ColumnName="DOTDWorkZone5" />
+                <ScalarProperty Name="HighwayNumberSK" ColumnName="HighwayNumberSK" />
+                <ScalarProperty Name="Holiday" ColumnName="Holiday" />
+                <ScalarProperty Name="HazMatInvolved" ColumnName="HazMatInvolved" />
+                <ScalarProperty Name="HWYSectionsAK" ColumnName="HWYSectionsAK" />
+                <ScalarProperty Name="ControlSection" ColumnName="ControlSection" />
+                <ScalarProperty Name="LogMile" ColumnName="LogMile" />
+                <ScalarProperty Name="AmbulanceCallTime" ColumnName="AmbulanceCallTime" />
+                <ScalarProperty Name="AmbulanceArriveTime" ColumnName="AmbulanceArriveTime" />
+                <ScalarProperty Name="AmbulanceHospitalTime" ColumnName="AmbulanceHospitalTime" />
+                <ScalarProperty Name="AmbulanceArrivalToHospitalTime" ColumnName="AmbulanceArrivalToHospitalTime" />
+                <ScalarProperty Name="LaneClosureTime" ColumnName="LaneClosureTime" />
+                <ScalarProperty Name="ElevatedInterstateCrash" ColumnName="ElevatedInterstateCrash" />
+                <ScalarProperty Name="AmbulanceCall" ColumnName="AmbulanceCall" />
+                <ScalarProperty Name="AmbulanceArrive" ColumnName="AmbulanceArrive" />
+                <ScalarProperty Name="AmbulanceHospital" ColumnName="AmbulanceHospital" />
+                <ScalarProperty Name="AmbulanceArrivalToHospital" ColumnName="AmbulanceArrivalToHospital" />
+                <ScalarProperty Name="LaneClosure" ColumnName="LaneClosure" />
+                <ScalarProperty Name="Motorcycle" ColumnName="Motorcycle" />
+                <ScalarProperty Name="Bicycle" ColumnName="Bicycle" />
+                <ScalarProperty Name="BusLarge" ColumnName="BusLarge" />
+                <ScalarProperty Name="BusSchool" ColumnName="BusSchool" />
+                <ScalarProperty Name="BusSmall" ColumnName="BusSmall" />
+                <ScalarProperty Name="HazMatReleasedInvolved" ColumnName="HazMatReleasedInvolved" />
+                <ScalarProperty Name="BAC08" ColumnName="BAC08" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

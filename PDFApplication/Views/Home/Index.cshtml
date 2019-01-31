@@ -1,0 +1,15 @@
+﻿@model PDFApplication.Models.FactCrash
+
+<input type="text" id="pdf" value="@(Model.CrashNumber == "0" || Model.CrashNumber == "-1" ? "" : Model.CrashNumber)" placeholder="Please enter crash number" />
+
+<a class="target" href="#">Find</a>
+
+<br />
+<br />
+
+<div id="result">
+    @if (Model.CrashNumber != "0")
+    {
+        @Html.Action("Partial", new { crashnum = Model.CrashNumber });
+    }
+</div>
