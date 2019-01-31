@@ -14,25 +14,10 @@ namespace PDFApplication.Controllers
 
         public ActionResult Index(string crashnum)
         {
-            FactCrash crash = new FactCrash();
-            if(!string.IsNullOrEmpty(crashnum))
-            {
-                try
-                {
-                    crash = crashdb.FactCrashes.Where(x => x.CrashNumber == crashnum).First();
-                }
-                catch
-                {
-                    //Could not find, -1 indicates error
-                    crash.CrashNumber = "-1";
-                }
-            }
-            else
-            {
-                //None entered, 0 indicates do not display crash
-                crash.CrashNumber = "0";
-            }
-            return View(crash);
+            FactCrash dummy = new FactCrash();
+            //0 indicates none entered, do not display anything
+            dummy.CrashNumber = string.IsNullOrEmpty(crashnum) ? "0" : crashnum;
+            return View(dummy);
         }
 
         public ActionResult GeneratePDF(FactCrash crash)
@@ -46,14 +31,19 @@ namespace PDFApplication.Controllers
         public ActionResult Partial(string crashnum)
         {
             FactCrash crash = new FactCrash();
-            //If there is not an error or no crash, do query
-            if(crashnum != "0" && crashnum != "-1")
+            crash.CrashNumber = crashnum;
+            //0 indicates none entered, do not display anything
+            if (crashnum != "0")
             {
-                crash = crashdb.FactCrashes.Where(x => x.CrashNumber == crashnum).First();
-            }
-            else
-            {
-                crash.CrashNumber = crashnum;
+                try
+                {
+                    crash = crashdb.FactCrashes.Where(x => x.CrashNumber == crashnum).First();
+                }
+                catch
+                {
+                    //Could not find, -1 indicates error
+                    crash.CrashNumber = "-1";
+                }
             }
             return PartialView(crash);
         }
