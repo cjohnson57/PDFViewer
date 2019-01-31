@@ -254,4 +254,5 @@ Procfile    text
 *.exe binary
 *.pyc binary
 
-src/packages/* linguist-vendored
+packages/* linguist-vendored
+PDFApplication/Scripts/* linguist-vendored
